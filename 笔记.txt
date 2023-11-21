@@ -1,0 +1,17 @@
+代码的组成部分在 Readme 中，但是代码里没有很好的注释
+
+前端：
+代码在 packages\node_modules\@node-red\editor-client
+
+这个项目使用 Grunt 作为构建工具（./Gruntfile.js）
+使用 Grunt 将 packages\node_modules\@node-red\editor-client\src 路径下的所有文件“拼接”到了一起，保存到 packages\node_modules\@node-red\editor-client\public 中
+这种“拼接”代码的方式让我没办法使用vscode调试，而且很多变量很难找到声明和使用的地方（使用全局搜索很难）
+
+主要使用 jQuery 作为实现工具
+
+
+
+后端：
+使用 express 作为api服务器 packages/node_modules/@node-red/editor-api/lib/util.js
+估计也是使用 express 作为网页服务器展示Grunt构建的前端界面，但没找到代码在哪
+
